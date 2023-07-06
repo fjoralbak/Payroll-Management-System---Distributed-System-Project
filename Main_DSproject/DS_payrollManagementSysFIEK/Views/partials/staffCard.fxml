@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="219.0" prefWidth="457.0" style="-fx-background-color: #99bbc7;" stylesheets="@../../resources/styles/app.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.partials.StaffCardController">
+    <children>
+        <HBox minHeight="-Infinity" prefHeight="161.0" prefWidth="640.0" VBox.vgrow="ALWAYS">
+            <VBox.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </VBox.margin>
+            <padding>
+                <Insets left="5.0" right="5.0" top="5.0" />
+            </padding>
+            <children>
+                <VBox alignment="CENTER" prefHeight="191.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                    <children>
+                  <Label fx:id="adminOrProfessor" text="User/Admin" />
+                  <ImageView fx:id="img" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/images/user-icon.png" />
+                     </image></ImageView>
+                    </children>
+                </VBox>
+                <VBox alignment="BOTTOM_CENTER" prefHeight="206.0" prefWidth="302.0" HBox.hgrow="ALWAYS">
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                    <children>
+                        <GridPane alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="158.0" prefWidth="250.0" VBox.vgrow="ALWAYS">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="154.4000244140625" minWidth="10.0" prefWidth="121.60004882812501" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.20001220703125" minWidth="10.0" prefWidth="107.199951171875" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="138.00000000000003" minWidth="10.0" prefWidth="100.4" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                            <children>
+                                <Label fx:id="name" text="Name">
+                                    <padding>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </padding>
+                                    <font>
+                                        <Font name="Arial" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="department" text="Department" GridPane.rowIndex="1">
+                                    <padding>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </padding>
+                                </Label>
+                                <Label fx:id="surname" text="Surname" GridPane.columnIndex="1">
+                                    <GridPane.margin>
+                                        <Insets />
+                                    </GridPane.margin>
+                                    <padding>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </padding>
+                                    <font>
+                                        <Font name="Arial" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="position" prefHeight="27.0" prefWidth="174.0" text="Position" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <padding>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </padding>
+                                </Label>
+                        <Label fx:id="SSN" text="SSN" GridPane.columnIndex="2">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="salary" text="Salary" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </Label>
+                            </children>
+                            <padding>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </padding>
+                        </GridPane>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" minWidth="-Infinity" prefHeight="0.0" prefWidth="455.0" style="-fx-background-color: #99bbc7;" VBox.vgrow="ALWAYS">
+            <VBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </VBox.margin>
+            <children>
+            <Button fx:id="showDetails" minWidth="-Infinity" mnemonicParsing="false" prefHeight="26.0" prefWidth="100.0" text="View Details">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Button>
+                <Button fx:id="editButton" minWidth="-Infinity" mnemonicParsing="false" prefHeight="32.0" prefWidth="85.0" text="Edit" textFill="#131313">
+                    <HBox.margin>
+                        <Insets left="130.0" />
+                    </HBox.margin>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="deleteButton" minWidth="-Infinity" mnemonicParsing="false" prefHeight="32.0" prefWidth="85.0" text="Delete" textFill="#101010">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                    <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+            <padding>
+                <Insets left="5.0" />
+            </padding>
+        </HBox>
+    </children>
+</VBox>
